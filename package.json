@@ -1,6 +1,6 @@
 {
-  "name": "azimuth-nextjs",
-  "description": "A Stackbit Azimuth theme built with Next.js",
+  "name": "reicopilot-marketing-site",
+  "description": "Your REI portfolio in your pocket.",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
