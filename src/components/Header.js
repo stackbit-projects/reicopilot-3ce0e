@@ -1,85 +1,14 @@
 import React from 'react';
-import Router from 'next/router';
 import _ from 'lodash';
+
+import { Fragment } from 'react'
+import { Popover, Transition } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 import { Link, withPrefix, classNames, getPageUrl } from '../utils';
 import Action from './Action';
 
 export default class Header extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleWindowResize = this.handleWindowResize.bind(this);
-        this.handleRouteChange = this.handleRouteChange.bind(this);
-        this.menuOpenRef = React.createRef();
-    }
-
-    componentDidMount() {
-        window.addEventListener('resize', this.handleWindowResize, true);
-        Router.events.on('routeChangeStart', this.handleRouteChange);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.handleWindowResize, true);
-        Router.events.off('routeChangeStart', this.handleRouteChange);
-    }
-
-    handleWindowResize() {
-        const menuOpenElm = _.get(this.menuOpenRef, 'current.offsetParent');
-        if (menuOpenElm === null) {
-            document.body.classList.remove('menu--opened');
-        }
-    }
-
-    handleRouteChange() {
-        document.body.classList.remove('menu--opened');
-    }
-
-    handleMenuOpen(event) {
-        event.preventDefault();
-        document.body.classList.add('menu--opened');
-    }
-
-    handleMenuClose(event) {
-        event.preventDefault();
-        document.body.classList.remove('menu--opened');
-    }
-
-    renderNavLinks(navLinks, pageUrl) {
-        return (
-            <React.Fragment>
-                <nav id="main-navigation" className="site-navigation" aria-label="Main Navigation">
-                    <div className="site-nav-inside">
-                        <button id="menu-close" className="menu-toggle" onClick={this.handleMenuClose.bind(this)}>
-                            <span className="screen-reader-text">Open Menu</span>
-                            <span className="icon-close" aria-hidden="true" />
-                        </button>
-                        <ul className="menu">
-                            {_.map(navLinks, (action, actionIdx) => {
-                                const actionUrl = _.trim(_.get(action, 'url'), '/');
-                                const actionStyle = _.get(action, 'style', 'link');
-                                return (
-                                    <li
-                                        key={actionIdx}
-                                        className={classNames('menu-item', {
-                                            'current-menu-item': pageUrl === actionUrl,
-                                            'menu-button': actionStyle !== 'link'
-                                        })}
-                                    >
-                                        <Action action={action} />
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                </nav>
-                <button id="menu-open" className="menu-toggle" ref={this.menuOpenRef} onClick={this.handleMenuOpen.bind(this)}>
-                    <span className="screen-reader-text">Close Menu</span>
-                    <span className="icon-menu" aria-hidden="true" />
-                </button>
-            </React.Fragment>
-        );
-    }
-
     render() {
         const config = _.get(this.props, 'config');
         const page = _.get(this.props, 'page');
@@ -89,35 +18,122 @@ export default class Header extends React.Component {
         const navLinks = _.get(header, 'nav_links');
         const logoImage = _.get(header, 'logo_img');
         const logoImageAlt = _.get(header, 'logo_img_alt');
-        const pageTemplate = _.get(page, 'template');
         const pageUrl = _.trim(getPageUrl(page), '/');
 
         return (
-            <header id="masthead" className="site-header outer">
-                <div className="inner">
-                    <div className="site-header-inside">
-                        <div className="site-branding">
-                            {logoImage && (
-                                <p className="site-logo">
-                                    <Link href={withPrefix('/')}>
-                                        <img src={withPrefix(logoImage)} alt={logoImageAlt} />
-                                    </Link>
-                                </p>
-                            )}
-                            {pageTemplate === 'landing' || pageTemplate === 'blog' ? (
-                                <h1 className={classNames('site-title', { 'screen-reader-text': logoImageAlt })}>
-                                    <Link href={withPrefix('/')}>{configTitle}</Link>
-                                </h1>
-                            ) : (
-                                <p className={classNames('site-title', { 'screen-reader-text': logoImageAlt })}>
-                                    <Link href={withPrefix('/')}>{configTitle}</Link>
-                                </p>
-                            )}
-                        </div>
-                        {hasNav && !_.isEmpty(navLinks) && this.renderNavLinks(navLinks, pageUrl)}
+          <Popover>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+              <nav className="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
+                <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+                  <div className="flex items-center justify-between w-full md:w-auto">
+                    {logoImage && (
+                      <Link href={withPrefix('/')}>
+                        <span className="sr-only">{configTitle}</span>
+                        <img
+                          className="h-8 w-auto sm:h-10"
+                          src={withPrefix(logoImage)}
+                          alt={logoImageAlt}
+                        />
+                      </Link>
+                    )}
+                    <div className="-mr-2 flex items-center md:hidden">
+                      <Popover.Button className="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <span className="sr-only">Open main menu</span>
+                        <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                      </Popover.Button>
                     </div>
+                  </div>
                 </div>
-            </header>
+                <ul className="hidden md:flex md:space-x-10">
+                  {hasNav && !_.isEmpty(navLinks) && _.map(navLinks, (action, actionIdx) => {
+                    const actionUrl = _.trim(_.get(action, 'url'), '/');
+                    return (
+                      <li
+                        key={actionIdx}
+                        className={classNames('font-medium', {
+                          'text-indigo-600': pageUrl === actionUrl,
+                          'text-gray-500': pageUrl !== actionUrl,
+                          'hover:text-gray-900': pageUrl !== actionUrl,
+                        })}
+                      >
+                        <Action action={action} />
+                      </li>
+                    );
+                  })}
+                </ul>
+                <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
+                  <span className="inline-flex rounded-md shadow">
+                    <a
+                      href="https://app.realnumberz.com"
+                      className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500"
+                    >
+                      Log in
+                    </a>
+                  </span>
+                </div>
+              </nav>
+            </div>
+        
+            <Transition
+              as={Fragment}
+              enter="duration-150 ease-out"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="duration-100 ease-in"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <Popover.Panel
+                focus
+                className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+              >
+                <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                  <div className="px-5 pt-4 flex items-center justify-between">
+                    <div>
+                      {logoImage && (
+                        <Link href={withPrefix('/')}>
+                          <img
+                            className="h-8 w-auto"
+                            src={withPrefix(logoImage)}
+                            alt={logoImageAlt}
+                          />
+                        </Link>
+                      )}
+                    </div>
+                    <div className="-mr-2">
+                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <span className="sr-only">Close main menu</span>
+                        <XIcon className="h-6 w-6" aria-hidden="true" />
+                      </Popover.Button>
+                    </div>
+                  </div>
+                  <ul className="px-2 pt-2 pb-3 space-y-1">
+                    {hasNav && !_.isEmpty(navLinks) && _.map(navLinks, (action, actionIdx) => {
+                      const actionUrl = _.trim(_.get(action, 'url'), '/');
+                      return (
+                        <li
+                          key={actionIdx}
+                          className={classNames('block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50', {
+                            'text-indigo-600': pageUrl === actionUrl,
+                            'text-gray-700': pageUrl !== actionUrl,
+                            'hover:text-gray-900': pageUrl !== actionUrl,
+                          })}
+                        >
+                          <Action action={action} />
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  <a
+                    href="https://app.realnumberz.com"
+                    className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700"
+                  >
+                    Log in
+                  </a>
+                </div>
+              </Popover.Panel>
+            </Transition>
+          </Popover>
         );
     }
 }
