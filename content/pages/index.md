@@ -3,7 +3,8 @@ title: Home
 sections:
   - section_id: hero
     type: section_hero
-    image: images/hero.png
+    image: >-
+      https://tailwindui.com/img/component-images/top-nav-with-multi-column-layout-screenshot.jpg
     image_alt: App preview
     title: Your portfolio
     subtitle: in your pocket

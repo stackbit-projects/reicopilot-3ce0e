@@ -1,9 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
-import { ChevronRightIcon, StarIcon } from '@heroicons/react/solid';
 
 import { withPrefix, markdownify } from '../utils';
-import CtaButtons from './CtaButtons';
 
 export default class SectionHero extends React.Component {
   render() {
@@ -17,7 +15,7 @@ export default class SectionHero extends React.Component {
     const actions = _.get(section, 'actions');
 
     return (
-      <div className="relative bg-white dark:bg-gray-900 overflow-hidden">
+      <div id={sectionId} className="relative bg-white dark:bg-gray-900 overflow-hidden">
 
         <div className="relative pt-6 pb-16 sm:pb-24 lg:pb-32">
           <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
@@ -34,7 +32,7 @@ export default class SectionHero extends React.Component {
                 </h1>
                 {content && (
                   <p className="mt-3 mr-4 text-base text-gray-500 dark:text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                    {content}
+                    {markdownify(content)}
                   </p>
                 )}
                 {actions && actions[0] && (
@@ -107,8 +105,8 @@ export default class SectionHero extends React.Component {
                   <div className="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
                     <img
                       className="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none"
-                      src="https://tailwindui.com/img/component-images/top-nav-with-multi-column-layout-screenshot.jpg"
-                      alt=""
+                      src={image}
+                      alt={imageAlt}
                     />
                   </div>
                 </div>
@@ -117,29 +115,6 @@ export default class SectionHero extends React.Component {
           </main>
         </div>
       </div>
-    );
-
-    return (
-      <section id={sectionId} className="block hero-block bg-accent outer">
-        <div className="inner">
-          <div className="grid">
-            {image && (
-              <div className="cell block-preview">
-                <img src={withPrefix(image)} alt={imageAlt} />
-              </div>
-            )}
-            <div className="cell block-content">
-              {title && <h2 className="block-title underline">{title}</h2>}
-              {content && <div className="block-copy">{markdownify(content)}</div>}
-              {actions && (
-                <div className="block-buttons">
-                  <CtaButtons actions={actions} />
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
     );
   }
 }
