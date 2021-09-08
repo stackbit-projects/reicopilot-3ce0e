@@ -33,39 +33,68 @@ sections:
   - section_id: features
     type: section_features
     background: gray
-    title: Features
-    subtitle: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a metus
-      quis lorem malesuada luctus.
+    title: AI-empowered investing
+    subtitle1: >-
+      Stop trying to do it all by yourself. It's
+    subtitle2: >-
+      , invest like it.
+    subtitle3: >-
+      Leverage the power of artificial intelligence to monitor and guide your investments.
+    includeDate: true
     features:
-      - title: The Best Feature of Your Services
-        image: images/feature1.png
-        image_alt: App preview on a phone and tablet
+      - title: Transfer funds world-wide
+        image: "https://tailwindui.com/img/features/feature-example-1.png"
+        image_alt: Transfer funds
         content: >-
-          Nam pulvinar ante eu ultricies volutpat. Aenean hendrerit, eros sed
-          aliquet luctus, lorem risus volutpat dolor, nec dignissim diam neque
-          consequat ex.
-        actions:
-          - label: Learn More
-            url: /features
-            style: secondary
-            has_icon: true
-            icon: arrow-right
-            icon_position: right
-      - title: Awesome Feature of Your Services
-        image: images/feature2.png
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur minima sequi recusandae, porro maiores
+          officia assumenda aliquam laborum ab aliquid veritatis impedit odit adipisci optio iste blanditiis facere.
+          Totam, velit.
+        subfeatures:
+          - id: 1
+            name: Competitive exchange rates
+            description: >-
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+            icon: GlobeAltIcon
+          - id: 2
+            name: No hidden fees
+            description:
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+            icon: ScaleIcon
+          - id: 3
+            name: Transfers are instant
+            description:
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+            icon: LightningBoltIcon
+        action:
+          label: Learn More
+          url: /features
+          style: secondary
+          has_icon: true
+          icon: arrow-right
+          icon_position: right
+      - title: Always in the loop
+        image: https://tailwindui.com/img/features/feature-example-2.png
         image_alt: App users welcoming a new member
         content: >-
-          Etiam vel urna sed massa egestas vulputate eu a velit. Sed ut nisl nec
-          sapien interdum luctus. Cras rhoncus condimentum metus sit amet
-          auctor.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ex obcaecati natus eligendi delectus, cum deleniti sunt in labore nihil quod quibusdam expedita nemo.
+        subfeatures:
+          - id: 1
+            name: Mobile notifications
+            description:
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+            icon: AnnotationIcon
+          - id: 2
+            name: Reminder emails
+            description:
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+            icon: MailIcon
         actions:
-          - label: Learn More
-            url: /features
-            style: secondary
-            has_icon: true
-            icon: arrow-right
-            icon_position: right
+          label: Learn More
+          url: /features
+          style: secondary
+          has_icon: true
+          icon: arrow-right
+          icon_position: right
       - title: Cool Feature of Your Services
         image: images/feature3.png
         image_alt: App user profile preview

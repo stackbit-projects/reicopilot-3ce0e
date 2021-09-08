@@ -104,7 +104,7 @@ export default class Header extends React.Component {
                     {logoImage && (
                       <Link href={withPrefix('/')} className="inline-flex">
                         <Logo className="fill-current text-primary-600 h-10 w-10" />
-                        <h1 class="self-center ml-2 order-1 text-gray-900 text-2xl tracking-tight">
+                        <h1 className="self-center ml-2 order-1 text-gray-900 text-2xl tracking-tight">
                           REI Copilot
                         </h1>
                       </Link>
