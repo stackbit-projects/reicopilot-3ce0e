@@ -24,12 +24,12 @@ sections:
   - section_id: logoCloud
     type: section_logo_cloud
     affiliateLogos:
-      - src: https://tailwindui.com/img/logos/statickit-logo-gray-400.svg
-        alt: StaticKit
-      - src: https://tailwindui.com/img/logos/transistor-logo-gray-400.svg
-        alt: Transistor
-      - src: https://tailwindui.com/img/logos/workcation-logo-gray-400.svg
-        alt: Workcation
+      - src: images/affiliate-logos/microsoft-logo-grey.png
+        alt: Microsoft
+      - src: images/affiliate-logos/tesla-logo-grey.png
+        alt: Tesla
+      - src: images/affiliate-logos/deloitte-logo-grey.png
+        alt: Deloitte
   - section_id: features
     type: section_features
     background: gray
