@@ -21,6 +21,15 @@ sections:
         microcopyUrl: /terms
         url: https://app.reicopilot.com
         style: primary
+  - section_id: logoCloud
+    type: section_logo_cloud
+    affiliateLogos:
+      - src: https://tailwindui.com/img/logos/statickit-logo-gray-400.svg
+        alt: StaticKit
+      - src: https://tailwindui.com/img/logos/transistor-logo-gray-400.svg
+        alt: Transistor
+      - src: https://tailwindui.com/img/logos/workcation-logo-gray-400.svg
+        alt: Workcation
   - section_id: features
     type: section_features
     background: gray
@@ -111,14 +120,14 @@ sections:
     background: gray
     title: Latest Posts
 seo:
-  title: Stackbit Azimuth Theme
+  title: REI Copilot
   description: The preview of the Azimuth theme
   extra:
     - name: 'og:type'
       value: website
       keyName: property
     - name: 'og:title'
-      value: Stackbit Azimuth Theme
+      value: REI Copilot
       keyName: property
     - name: 'og:description'
       value: The preview of the Azimuth theme
@@ -130,7 +139,7 @@ seo:
     - name: 'twitter:card'
       value: summary_large_image
     - name: 'twitter:title'
-      value: Stackbit Azimuth Theme
+      value: REI Copilot Twitter
     - name: 'twitter:description'
       value: The preview of the Azimuth theme
     - name: 'twitter:image'
