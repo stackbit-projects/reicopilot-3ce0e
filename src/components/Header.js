@@ -25,7 +25,7 @@ export default class Header extends React.Component {
         <Popover>
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <nav className="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
-              <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+              <div className="flex items-center flex-1">
                 <div className="flex items-center justify-between w-full md:w-auto">
                   {logoImage && (
                     <Link href={withPrefix('/')}>
@@ -48,35 +48,40 @@ export default class Header extends React.Component {
                     </Popover.Button>
                   </div>
                 </div>
+                <ul className="hidden md:flex md:ml-10 md:space-x-10">
+                  {hasNav && !_.isEmpty(navLinks) && _.map(navLinks, (action, actionIdx) => {
+                    const actionUrl = _.trim(_.get(action, 'url'), '/');
+                    return (
+                      <li
+                        key={actionIdx}
+                        className={classNames('font-medium', {
+                          'text-primary-600 dark:text-primary-400': pageUrl === actionUrl,
+                          'text-gray-500 dark:text-white': pageUrl !== actionUrl,
+                          'hover:text-gray-900 dark:hover:text-gray-300': pageUrl !== actionUrl,
+                        })}
+                      >
+                        <Action action={action} />
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
-              <ul className="hidden md:flex md:space-x-10">
-                {hasNav && !_.isEmpty(navLinks) && _.map(navLinks, (action, actionIdx) => {
-                  const actionUrl = _.trim(_.get(action, 'url'), '/');
-                  return (
-                    <li
-                      key={actionIdx}
-                      className={classNames('font-medium', {
-                        'text-primary-600 dark:text-primary-400': pageUrl === actionUrl,
-                        'text-gray-500 dark:text-white': pageUrl !== actionUrl,
-                        'hover:text-gray-900 dark:hover:text-gray-300': pageUrl !== actionUrl,
-                      })}
-                    >
-                      <Action action={action} />
-                    </li>
-                  );
-                })}
-              </ul>
-              <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-                <span className="inline-flex rounded-md shadow">
-                  <a
-                    href="https://app.reicopilot.com"
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md
-                    text-primary-600 bg-white hover:text-primary-500 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-700
-                    dark:hover:text-white"
-                  >
-                    Log in
-                  </a>
-                </span>
+              <div className="hidden md:flex md:items-center md:space-x-6">
+                <a
+                  href="https://app.reicopilot.com"
+                  class="whitespace-nowrap text-base font-medium text-gray-500
+                    hover:text-gray-900 dark:text-white dark:hover:text-gray-300"
+                >
+                  Sign in
+                </a>
+                <a
+                  href="https://app.reicopilot.com"
+                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center
+                  px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium
+                  text-white bg-primary-600 hover:bg-primary-700"
+                >
+                  Start free trial
+                </a>
               </div>
             </nav>
           </div>
@@ -94,7 +99,7 @@ export default class Header extends React.Component {
               focus
               className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
             >
-              <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+              <div className="pb-6 rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <div className="px-5 pt-4 flex items-center justify-between">
                   <div>
                     {logoImage && (
@@ -131,13 +136,27 @@ export default class Header extends React.Component {
                     );
                   })}
                 </ul>
-                <a
-                  href="https://app.reicopilot.com"
-                  className="block w-full px-5 py-3 text-center font-medium text-primary-600
-                    bg-gray-50 hover:bg-gray-100 hover:text-primary-700"
-                >
-                  Log in
-                </a>
+                <div className="mt-6 px-5">
+                  <a
+                    href="https://app.reicopilot.com"
+                    className="block text-center w-full py-3 px-4 rounded-md shadow bg-primary-600
+                      text-white font-medium hover:bg-primary-700"
+                  >
+                    Start free trial
+                  </a>
+                </div>
+                <div className="mt-6 px-5">
+                  <p className="text-center text-base font-medium text-gray-500">
+                    Existing customer?
+                    {' '}
+                    <a
+                      href="https://app.reicopilot.com"
+                      className="text-gray-900 hover:underline"
+                    >
+                      Sign in
+                    </a>
+                  </p>
+                </div>
               </div>
             </Popover.Panel>
           </Transition>
