@@ -7,6 +7,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 import { Link, withPrefix, classNames, getPageUrl } from '../utils';
 import Action from './Action';
+import Logo from './Logo';
 
 export default class Header extends React.Component {
   render() {
@@ -28,13 +29,11 @@ export default class Header extends React.Component {
               <div className="flex items-center flex-1">
                 <div className="flex items-center justify-between w-full md:w-auto">
                   {logoImage && (
-                    <Link href={withPrefix('/')}>
-                      <span className="sr-only">{configTitle}</span>
-                      <img
-                        className="h-8 w-auto sm:h-10"
-                        src={withPrefix(logoImage)}
-                        alt={logoImageAlt}
-                      />
+                    <Link href={withPrefix('/')} className="inline-flex">
+                      <Logo className="fill-current text-primary-600 dark:text-primary-400 h-10 w-10" />
+                        <h1 class="self-center ml-2 order-1 text-gray-900 dark:text-white text-2xl tracking-tight">
+                          REI Copilot
+                        </h1>
                     </Link>
                   )}
                   <div className="-mr-2 flex items-center md:hidden">
@@ -78,7 +77,7 @@ export default class Header extends React.Component {
                   href="https://app.reicopilot.com"
                   className="ml-8 whitespace-nowrap inline-flex items-center justify-center
                   px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium
-                  text-white bg-primary-600 hover:bg-primary-700"
+                  text-white bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600"
                 >
                   Start free trial
                 </a>
@@ -103,12 +102,11 @@ export default class Header extends React.Component {
                 <div className="px-5 pt-4 flex items-center justify-between">
                   <div>
                     {logoImage && (
-                      <Link href={withPrefix('/')}>
-                        <img
-                          className="h-8 w-auto"
-                          src={withPrefix(logoImage)}
-                          alt={logoImageAlt}
-                        />
+                      <Link href={withPrefix('/')} className="inline-flex">
+                        <Logo className="fill-current text-primary-600 h-10 w-10" />
+                        <h1 class="self-center ml-2 order-1 text-gray-900 text-2xl tracking-tight">
+                          REI Copilot
+                        </h1>
                       </Link>
                     )}
                   </div>
