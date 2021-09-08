@@ -16,7 +16,6 @@ export default class Landing extends React.Component {
 
         return (
             <Layout page={page} config={config}>
-                <WithAppScreenshot />
                 {_.map(sections, (section, index) => {
                     const sectionType = _.get(section, 'type');
                     const component = _.upperFirst(_.camelCase(sectionType));

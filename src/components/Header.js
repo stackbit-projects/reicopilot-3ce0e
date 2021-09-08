@@ -21,7 +21,7 @@ export default class Header extends React.Component {
     const pageUrl = _.trim(getPageUrl(page), '/');
 
     return (
-      <div className="relative pt-6 pb-6 z-10">
+      <div className="relative pt-6 pb-6 z-10 bg-white dark:bg-gray-900">
         <Popover>
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <nav className="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
@@ -38,7 +38,11 @@ export default class Header extends React.Component {
                     </Link>
                   )}
                   <div className="-mr-2 flex items-center md:hidden">
-                    <Popover.Button className="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <Popover.Button
+                      className="bg-gray-50 dark:bg-gray-900 rounded-md p-2 inline-flex items-center
+                      justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:text-gray-400 dark:hover:bg-gray-800
+                      focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-white"
+                    >
                       <span className="sr-only">Open main menu</span>
                       <MenuIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
@@ -52,9 +56,9 @@ export default class Header extends React.Component {
                     <li
                       key={actionIdx}
                       className={classNames('font-medium', {
-                        'text-indigo-600': pageUrl === actionUrl,
-                        'text-gray-500': pageUrl !== actionUrl,
-                        'hover:text-gray-900': pageUrl !== actionUrl,
+                        'text-primary-600 dark:text-primary-400': pageUrl === actionUrl,
+                        'text-gray-500 dark:text-white': pageUrl !== actionUrl,
+                        'hover:text-gray-900 dark:hover:text-gray-300': pageUrl !== actionUrl,
                       })}
                     >
                       <Action action={action} />
@@ -66,7 +70,9 @@ export default class Header extends React.Component {
                 <span className="inline-flex rounded-md shadow">
                   <a
                     href="https://app.reicopilot.com"
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500"
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md
+                    text-primary-600 bg-white hover:text-primary-500 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-700
+                    dark:hover:text-white"
                   >
                     Log in
                   </a>
@@ -102,7 +108,7 @@ export default class Header extends React.Component {
                     )}
                   </div>
                   <div className="-mr-2">
-                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
                       <span className="sr-only">Close main menu</span>
                       <XIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
@@ -115,7 +121,7 @@ export default class Header extends React.Component {
                       <li
                         key={actionIdx}
                         className={classNames('block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50', {
-                          'text-indigo-600': pageUrl === actionUrl,
+                          'text-primary-600': pageUrl === actionUrl,
                           'text-gray-700': pageUrl !== actionUrl,
                           'hover:text-gray-900': pageUrl !== actionUrl,
                         })}
@@ -127,7 +133,8 @@ export default class Header extends React.Component {
                 </ul>
                 <a
                   href="https://app.reicopilot.com"
-                  className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700"
+                  className="block w-full px-5 py-3 text-center font-medium text-primary-600
+                    bg-gray-50 hover:bg-gray-100 hover:text-primary-700"
                 >
                   Log in
                 </a>

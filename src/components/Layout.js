@@ -104,7 +104,7 @@ export default class Body extends React.Component {
                 </Helmet>
                 <div id="page" className="site">
                     <Header page={page} config={config} />
-                    <main id="content" className="site-content">
+                    <main id="content">
                         {this.props.children}
                     </main>
                     <Footer config={config} />

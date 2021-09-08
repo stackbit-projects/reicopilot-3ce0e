@@ -5,13 +5,20 @@ sections:
     type: section_hero
     image: images/hero.png
     image_alt: App preview
-    title: This Is A Big Hero Headline
+    title: Your portfolio
+    subtitle: in your pocket
     content: >-
-      Azimuth is the perfect theme for developers, designers and entrepreneurs
-      who need a sleek, modern SaaS site.
+      Invest stress-free and confident with your entire real estate portfolio at your fingertips,
+      no matter where you are.
     actions:
-      - label: Learn More
-        url: /features
+      - label: Start free trial
+        placeholder: Enter your email
+        microcopy: >-
+          Start your free 14-day trial, no credit card necessary. By providing your
+          email, you agree to our
+        microcopyLink: Terms of Service
+        microcopyUrl: /terms
+        url: https://app.reicopilot.com
         style: primary
   - section_id: features
     type: section_features
