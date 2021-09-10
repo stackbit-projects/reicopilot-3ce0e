@@ -27,22 +27,15 @@
                 "label": "Style Guide",
                 "url": "/style-guide",
                 "style": "link"
-            },
-            {
-                "label": "Sign Up",
-                "url": "/signup",
-                "style": "primary"
             }
         ]
     },
     "footer": {
         "sections": [
             {
-                "type": "footer_text",
-                "image": "images/logo-alt.svg",
-                "image_url": "/",
-                "image_alt": "Footer logo",
-                "content": "Stackbit theme demo"
+                "type": "logo_with_text",
+                "size": "sm",
+                "darkModeEnabled": true
             },
             {
                 "type": "footer_nav",
@@ -50,23 +43,19 @@
                 "nav_links": [
                     {
                         "label": "About Us",
-                        "url": "/about",
-                        "style": "link"
+                        "url": "/about"
                     },
                     {
                         "label": "Blog",
-                        "url": "/blog",
-                        "style": "link"
+                        "url": "/blog"
                     },
                     {
                         "label": "Sign Up",
-                        "url": "/signup",
-                        "style": "link"
+                        "url": "/signup"
                     },
                     {
                         "label": "Contact",
-                        "url": "/contact",
-                        "style": "link"
+                        "url": "/contact"
                     }
                 ]
             },
@@ -101,37 +90,29 @@
                 ]
             },
             {
-                "type": "footer_form",
-                "title": "Subscribe",
-                "content": "Stay up to date with our latest developments.",
-                "form_id": "subscribeForm",
-                "hide_labels": true,
-                "form_fields": [
+                "type": "footer_nav",
+                "title": "Company 2",
+                "nav_links": [
                     {
-                        "input_type": "email",
-                        "name": "email",
-                        "label": "Email",
-                        "default_value": "Enter email address",
-                        "is_required": true
+                        "label": "About Us",
+                        "url": "/about"
+                    },
+                    {
+                        "label": "Blog",
+                        "url": "/blog"
+                    },
+                    {
+                        "label": "Sign Up",
+                        "url": "/signup"
+                    },
+                    {
+                        "label": "Contact",
+                        "url": "/contact"
                     }
-                ],
-                "submit_label": "Subscribe"
+                ]
             }
         ],
-        "has_nav": true,
-        "nav_links": [
-            {
-                "label": "Terms of Service",
-                "url": "/terms-of-service",
-                "style": "link"
-            },
-            {
-                "label": "Privacy Policy",
-                "url": "/privacy-policy",
-                "style": "link"
-            }
-        ],
-        "content": "&copy; Stackbit. All rights reserved. This Jamstack site was created with <a href=\"https://www.stackbit.com/?utm_source=deployed-footer\" target=\"_blank\" rel=\"noopener\">Stackbit</a>. Create yours <a href=\"https://app.stackbit.com/create?theme=azimuth&utm_source=deployed-footer\" target=\"_blank\" rel=\"noopener\">now</a>."
+        "content": "&copy; REI Copilot 2021. All rights reserved."
     },
-    "domain": "https://reicopilot-3ce0e.netlify.app"
+    "domain": "https://app.reicopilot.com"
 }

@@ -9,6 +9,7 @@ import FooterText from './FooterText';
 import FormField from './FormField';
 import Header from './Header';
 import Layout from './Layout';
+import LogoWithText from './LogoWithText';
 import Icon from './Icon';
 import SectionContact from './SectionContact';
 import SectionContent from './SectionContent';
@@ -16,9 +17,12 @@ import SectionCta from './SectionCta';
 import SectionFaq from './SectionFaq';
 import SectionFeatures from './SectionFeatures';
 import SectionHero from './SectionHero';
+import SectionLogoCloud from './SectionLogoCloud';
+import SectionMiniFeatures from './SectionMiniFeatures';
 import SectionPosts from './SectionPosts';
 import SectionPricing from './SectionPricing';
 import SectionReviews from './SectionReviews';
+import SectionSecurity from './SectionSecurity';
 
 export {
     Action,
@@ -32,6 +36,7 @@ export {
     FormField,
     Header,
     Layout,
+    LogoWithText,
     Icon,
     SectionContact,
     SectionContent,
@@ -39,9 +44,12 @@ export {
     SectionFaq,
     SectionFeatures,
     SectionHero,
+    SectionLogoCloud,
+    SectionMiniFeatures,
     SectionPosts,
     SectionPricing,
-    SectionReviews
+    SectionReviews,
+    SectionSecurity
 };
 
 export default {
@@ -56,6 +64,7 @@ export default {
     FormField,
     Header,
     Layout,
+    LogoWithText,
     Icon,
     SectionContact,
     SectionContent,
@@ -63,7 +72,10 @@ export default {
     SectionFaq,
     SectionFeatures,
     SectionHero,
+    SectionLogoCloud,
+    SectionMiniFeatures,
     SectionPosts,
     SectionPricing,
-    SectionReviews
+    SectionReviews,
+    SectionSecurity,
 };
