@@ -9,6 +9,7 @@ import FooterText from './FooterText';
 import FormField from './FormField';
 import Header from './Header';
 import Layout from './Layout';
+import LogoWithText from './LogoWithText';
 import Icon from './Icon';
 import SectionContact from './SectionContact';
 import SectionContent from './SectionContent';
@@ -33,6 +34,7 @@ export {
     FormField,
     Header,
     Layout,
+    LogoWithText,
     Icon,
     SectionContact,
     SectionContent,
@@ -58,6 +60,7 @@ export default {
     FormField,
     Header,
     Layout,
+    LogoWithText,
     Icon,
     SectionContact,
     SectionContent,

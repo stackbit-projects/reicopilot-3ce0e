@@ -1,27 +1,38 @@
 import React from 'react';
-import _ from 'lodash';
+import get from 'lodash/get';
+import map from 'lodash/map';
 
-import Action from './Action';
+import { Link } from '../utils';
 
 export default class FooterNav extends React.Component {
-    render() {
-        const section = _.get(this.props, 'section');
-        const title = _.get(section, 'title');
-        const navLinks = _.get(section, 'nav_links');
+  render() {
+    const section = get(this.props, 'section');
+    const title = get(section, 'title');
+    const navLinks = get(section, 'nav_links');
 
-        return (
-            <section className="cell widget widget-nav">
-                {title && <h2 className="widget-title">{title}</h2>}
-                {navLinks && (
-                    <ul className="menu">
-                        {_.map(navLinks, (action, actionIdx) => (
-                            <li key={actionIdx} className="menu-item">
-                                <Action action={action} />
-                            </li>
-                        ))}
-                    </ul>
-                )}
-            </section>
-        );
-    }
+    return (
+      <div>
+        {title && (
+          <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+            {title}
+          </h3>
+        )}
+        {navLinks && (
+          <ul role="list" className="mt-4 space-y-4">
+            {map(navLinks, (action) => (
+              <li key={action.label}>
+                <Link
+                  href={action.url}
+                  className="text-base text-gray-500 hover:text-gray-900
+                    dark:text-gray-300 dark:hover:text-white"
+                >
+                  {action.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    );
+  }
 }

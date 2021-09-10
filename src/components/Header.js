@@ -7,7 +7,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 import { Link, withPrefix, classNames, getPageUrl } from '../utils';
 import Action from './Action';
-import Logo from './Logo';
+import LogoWithText from './LogoWithText';
 
 export default class Header extends React.Component {
   render() {
@@ -28,14 +28,7 @@ export default class Header extends React.Component {
             <nav className="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
               <div className="flex items-center flex-1">
                 <div className="flex items-center justify-between w-full md:w-auto">
-                  {logoImage && (
-                    <Link href={withPrefix('/')} className="inline-flex">
-                      <Logo className="fill-current text-primary-600 dark:text-primary-400 h-10 w-10" />
-                        <h1 class="self-center ml-2 order-1 text-gray-900 dark:text-white text-2xl tracking-tight">
-                          REI Copilot
-                        </h1>
-                    </Link>
-                  )}
+                  {logoImage && (<LogoWithText size="lg" darkModeEnabled />)}
                   <div className="-mr-2 flex items-center md:hidden">
                     <Popover.Button
                       className="bg-gray-50 dark:bg-gray-900 rounded-md p-2 inline-flex items-center
@@ -101,14 +94,7 @@ export default class Header extends React.Component {
               <div className="pb-6 rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <div className="px-5 pt-4 flex items-center justify-between">
                   <div>
-                    {logoImage && (
-                      <Link href={withPrefix('/')} className="inline-flex">
-                        <Logo className="fill-current text-primary-600 h-10 w-10" />
-                        <h1 className="self-center ml-2 order-1 text-gray-900 text-2xl tracking-tight">
-                          REI Copilot
-                        </h1>
-                      </Link>
-                    )}
+                    {logoImage && (<LogoWithText size="lg" />)}
                   </div>
                   <div className="-mr-2">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
@@ -137,7 +123,7 @@ export default class Header extends React.Component {
                 <div className="mt-6 px-5">
                   <a
                     href="https://app.reicopilot.com"
-                    className="block text-center w-full py-3 px-4 rounded-md shadow bg-primary-600
+                    className="block text-center w-full py-3 px-4 rounded-md shadow bg-primary-500
                       text-white font-medium hover:bg-primary-700"
                   >
                     Start free trial
