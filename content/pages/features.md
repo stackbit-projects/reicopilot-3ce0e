@@ -135,13 +135,13 @@ sections:
         title: Encryption of Data In Transit and At Rest
         content: >-
           REI Copilot only allows client requests using strong TLS protocols and ciphers. Requests to our API require authentication which utilizes cryptographically hashed headers and timestamps to verify authenticity.
-          <br />
+          <br /><br />
           Though we limit the amount of sensitive data we require from users, any sensitive data stored (ex. password) is encrypted.
       - id: 3
         title: Access Controls
         content: >-
           REI Copilot has various levels of access controls throughout the system.
-          <br />
+          <br /><br />
           Even our own Concierge Upload members, do not have access to your data and cannot view dashboards and previously entered information when creating uploading your investments.
   - section_id: call-to-action
     type: section_cta
