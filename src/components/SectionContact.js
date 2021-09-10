@@ -88,6 +88,13 @@ const SectionContact = (props) => {
             data-netlify-honeypot={formHoneypotName}
             className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
           >
+            <div className="screen-reader-text">
+              <label id={formHoneypotLabelId} htmlFor={formHoneypotInputId}>
+                Don't fill this out if you're human:
+              </label>
+              <input aria-labelledby={formHoneypotLabelId} id={formHoneypotInputId} name={formHoneypotName} />
+            </div>
+            <input aria-labelledby={formHoneypotLabelId} type="hidden" name="form-name" value={formId} />
             <div>
               <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
                 First name
