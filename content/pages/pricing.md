@@ -5,11 +5,13 @@ sections:
     type: section_pricing
     background: gray
     title: Pricing Plans
-    subtitle: You can have a separate pricing page or list everything on the home page.
+    subtitle: The all-in-one solution trusted by all levels of real estate investors.
+    subtitle2: Buy now and save 30% or try it free for 14 days.
     pricing_plans:
       - title: Basic
         subtitle: For small businesses
-        price: $5/m
+        priceBuyNow: 47
+        priceFreeTrial: 69
         details: |-
           * Lorem ipsum dolor sit amet
           * Mauris a mi tincidunt
@@ -21,7 +23,8 @@ sections:
             style: secondary
       - title: Professional
         subtitle: For medium-sized businesses
-        price: $49/m
+        priceBuyNow: 97
+        priceFreeTrial: 139
         details: |-
           * Curabitur non nunc mollis
           * Duis a purus nec ligula pellentesque dolor
