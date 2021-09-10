@@ -3,51 +3,33 @@ title: Pricing
 sections:
   - section_id: pricing
     type: section_pricing
-    background: gray
     title: Pricing Plans
     subtitle: The all-in-one solution trusted by all levels of real estate investors.
     subtitle2: Buy now and save 30% or try it free for 14 days.
     pricing_plans:
-      - title: Basic
-        subtitle: For small businesses
+      - name: 'Basic'
+        href: '#'
         priceBuyNow: 47
         priceFreeTrial: 69
-        details: |-
-          * Lorem ipsum dolor sit amet
-          * Mauris a mi tincidunt
-          * Suspendisse ut lacus
-          * Etiam eget dui a augue
-        actions:
-          - label: Order Now
-            url: /signup
-            style: secondary
-      - title: Professional
-        subtitle: For medium-sized businesses
+        description: All the basics for starting a new business
+        includedFeatures:
+          - Potenti felis, in cras at at ligula nunc.
+          - Orci neque eget pellentesque.
+      - name: 'Unlimited'
+        href: '#'
         priceBuyNow: 97
         priceFreeTrial: 139
-        details: |-
-          * Curabitur non nunc mollis
-          * Duis a purus nec ligula pellentesque dolor
-          * Pellentesque sit amet
-          * Fusce tempus mi vitae luctus
-          * Nullam sollicitudin ante
-        highlight: true
-        actions:
-          - label: Order Now
-            url: /signup
-            style: primary
-      - title: Enterprise
-        subtitle: For very large businesses
-        price: $149/m
-        details: |-
-          * Vestibulum non eros quis
-          * Aenean iaculis lorem
-          * Mauris eleifend sapien
-          * Phasellus lobortis risus laoreet quam
-        actions:
-          - label: Order Now
-            url: /signup
-            style: secondary
+        description: 'All the basics for starting a new business'
+        includedFeatures:
+          - Potenti felis, in cras at at ligula nunc.
+          - Orci neque eget pellentesque.
+          - Donec mauris sit in eu tincidunt etiam.
+    promotion:
+      badge: Limited Time Offer
+      title: Worried about initial set-up?
+      subtitle: You may qualify for one-time concierge data entry for
+      price: 501
+      buttonText: Ask about availability
   - section_id: faq
     type: section_faq
     background: gray
