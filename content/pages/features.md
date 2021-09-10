@@ -2,33 +2,102 @@
 title: Features
 sections:
   - section_id: features
-    type: section_content
-    background: gray
-    image: images/feature1.png
-    image_alt: App preview on a phone and tablet
-    title: The Best Features of Your Services
-    content: >-
-      Nam pulvinar ante eu ultricies volutpat. Sed nulla nibh, dapibus sit amet
-      cursus quis, fringilla nec sapien. Vestibulum imperdiet nunc bibendum
-      consectetur lobortis.
-
-
-      * Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-      * Ut eu nunc at diam fringilla fringilla eu ut massa.
-
-      * Phasellus ut enim non lorem venenatis rutrum.
-
-
-      Mollis eget congue quis, venenatis sit amet metus. Etiam sit amet tortor
-      sed justo tempor condimentum.
-    actions:
-      - label: Free Trial
-        url: /signup
-        style: primary
-      - label: View Demo
-        url: '#'
-        style: secondary
+    type: section_features
+    title: REI Copilot is your portfolio command center
+    subtitle1: >-
+      REI Copilot centralizes and organizes your investments — giving you a single place for storage, monitoring, analysis, and decision making — helping you save time and money.
+    features:
+      - title: Organize while you sleep
+        image: images/features/plaid-select-bank-2.png
+        image_alt: Connect bank account
+        apply_shadow: true
+        content: >-
+          Reduce time spent and increase accuracy by connecting your accounts
+        subfeatures:
+          - id: 1
+            name: Account Balances
+            description: >-
+              REI Copilot allows users to link their bank accounts, so that they are able to quickly determine where their money is. This is a time-saver in and of itself. REI Copilot also aggregates this data to allow users to see their monetary outlay as a whole and know, at-a-glance, how much money is currently invested and how much money they have available to deploy to new investments.
+            icon: GlobeAltIcon
+          - id: 2
+            name: Automatic Transaction Import
+            description:
+              Using bank account connections previously mentioned, REI Copilot automatically imports transactions to your ledger saving you time entering information and ensuring that you’re tracking accurately and fully. Your portfolio will be organizing itself while you sleep!
+            icon: ScaleIcon
+          - id: 3
+            name: Coming soon
+            description:
+              Artificial intelligence and machine learning used to automatically categorize transactions to specific investments
+            icon: LightningBoltIcon
+        action:
+          label: Learn More
+          url: /features
+          style: secondary
+          has_icon: true
+          icon: arrow-right
+          icon_position: right
+      - title: Maximize profit, minimize stress
+        image: images/features/iPhone-Reminders-2.png
+        image_alt: Reminder system
+        apply_shadow: false
+        content: >-
+          Let REI Copilot's artificial intelligence monitor your portfolio at all times
+        subfeatures:
+          - id: 1
+            name: AI-Driven Reminder System
+            description:
+              REI Copilot has a complex reminder system that ensures you don’t miss a single payment
+            icon: AnnotationIcon
+          - id: 2
+            name: Never Miss A Payment
+            description:
+              One missed rent check can be catastrophic to your return and missing a tax payment you owe usually comes with steep fines. We’ve got you covered in both cases.
+            icon: MailIcon
+          - id: 3
+            name: We've Got Your Back
+            description:
+              As you enter properties, contracts, etc. into REI Copilot, the app will automatically create Reminders for the specified time period. The Reminders will be driven from your ledger, so if a rent payment is missing, you’ll receive an email or text letting you know!
+            icon: MailIcon
+          - id: 4
+            description:
+              REI Copilot was designed to put the “passive” back in passive investing. With the reminders system, you can set it and forget it. Your investments are constantly being monitored to ensure that everything goes as planned without any effort of your own.
+        actions:
+          label: Learn More
+          url: /features
+          style: secondary
+          has_icon: true
+          icon: arrow-right
+          icon_position: right
+      - title: Real-time analytics
+        image: images/features/dashboard-cards-white.png
+        image_alt: Dashboard cards
+        image2: images/features/quick-keys-roi.png
+        image2_alt: Investment ROI
+        apply_shadow: false
+        content: >-
+          Take control of your investments with accurate, aggregated analytics instead of single-use formulas
+        subfeatures:
+          - id: 1
+            name: Your Portfolio At-A-Glance
+            description: >-
+              REI Copilot will automatically perform various calculations and generate charts and tables providing real-time insight into the most important metrics allowing accurate evaluation of a property’s performance. The statistics and diagrams are driven by Ledger data and will update automatically as new information is provided ensuring the most up-to-date information. This is one of the biggest departures from other property management spreadsheets or softwares which simply calculate the projected values instead of actual.
+            icon: AnnotationIcon
+          - id: 2
+            name: Case Study
+            description: >-
+              A seasoned investor and personal friend once held investments in their portfolio for multiple years assuming they were making the promised 12 - 15% return. Eventually, they sat down to calculate the ROI and found out it was a mere 3.9%
+          - id: 3
+            name: Understand your investments
+            description: >-
+              To provide a holistic view of portfolio performance and give better insight into and management of user’s investments, REI Copilot aggregates data from individual investments properties, lending deals, notes, funds, syndications, etc. into one easy-to-understand dashboard. This gives users knowledge and confidence and alerts them to any issues that need attention. The dashboard shows them any vacancies, outstanding payments, discrepancies between projected and actual revenue, and more!
+            icon: AnnotationIcon
+        actions:
+          - label: Learn More
+            url: /features
+            style: secondary
+            has_icon: true
+            icon: arrow-right
+            icon_position: right
   - section_id: call-to-action
     type: section_cta
     title: This Is Call to Action Block!

@@ -2,6 +2,7 @@ import React from 'react';
 import get from 'lodash/get';
 import kebabCase from 'lodash/kebabCase';
 import map from 'lodash/map';
+import classNames from 'classnames';
 
 import HeroIcons from './HeroIcons';
 import { markdownify, withPrefix } from '../utils';
@@ -9,6 +10,9 @@ import { markdownify, withPrefix } from '../utils';
 const RightFeature = ({ feature }) => {
   const image = get(feature, 'image');
   const imageAlt = get(feature, 'image_alt');
+  const image2 = get(feature, 'image2');
+  const image2Alt = get(feature, 'image2_alt');
+  const applyShadow = get(feature, 'apply_shadow');
   const title = get(feature, 'title');
   const content = get(feature, 'content');
   const subfeatures = get(feature, 'subfeatures');
@@ -60,9 +64,11 @@ const RightFeature = ({ feature }) => {
                 return (
                   <div key={item.id} className="relative">
                     <dt>
-                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
-                        <Icon className="h-6 w-6" aria-hidden="true" />
-                      </div>
+                      {Icon && (
+                        <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                          <Icon className="h-6 w-6" aria-hidden="true" />
+                        </div>
+                      )}
                       <p className="ml-16 text-lg leading-6 font-medium text-gray-900 dark:text-white">{item.name}</p>
                     </dt>
                     <dd className="mt-2 ml-16 text-base text-gray-500 dark:text-gray-300">{item.description}</dd>
@@ -96,11 +102,23 @@ const RightFeature = ({ feature }) => {
               <rect width={784} height={404} fill="url(#e80155a9-dfde-425a-b5ea-1f6fadd20131)" />
             </svg>
             <img
-              className="relative mx-auto"
+              className={classNames('relative mx-auto', {
+              'shadow-lg rounded-lg': applyShadow,
+              })}
               width={490}
               src={withPrefix(image)}
               alt={imageAlt}
             />
+            {image2 && (
+              <img
+                className={classNames('relative mx-auto', {
+                  'shadow-lg rounded-lg': applyShadow,
+                })}
+                width={490}
+                src={withPrefix(image2)}
+                alt={image2Alt}
+              />
+            )}
           </div>
         </div>
       </div>

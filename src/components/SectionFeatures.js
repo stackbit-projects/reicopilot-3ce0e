@@ -10,7 +10,6 @@ export default class SectionFeatures extends React.Component {
   render() {
     const section = _.get(this.props, 'section');
     const sectionId = _.get(section, 'section_id');
-    const background = _.get(section, 'background');
     const title = _.get(section, 'title');
     const subtitle1 = _.get(section, 'subtitle1');
     const subtitle2 = _.get(section, 'subtitle2');
