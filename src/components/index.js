@@ -18,6 +18,7 @@ import SectionFaq from './SectionFaq';
 import SectionFeatures from './SectionFeatures';
 import SectionHero from './SectionHero';
 import SectionLogoCloud from './SectionLogoCloud';
+import SectionMiniFeatures from './SectionMiniFeatures';
 import SectionPosts from './SectionPosts';
 import SectionPricing from './SectionPricing';
 import SectionReviews from './SectionReviews';
@@ -43,6 +44,7 @@ export {
     SectionFeatures,
     SectionHero,
     SectionLogoCloud,
+    SectionMiniFeatures,
     SectionPosts,
     SectionPricing,
     SectionReviews
@@ -69,6 +71,7 @@ export default {
     SectionFeatures,
     SectionHero,
     SectionLogoCloud,
+    SectionMiniFeatures,
     SectionPosts,
     SectionPricing,
     SectionReviews

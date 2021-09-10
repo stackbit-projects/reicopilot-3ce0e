@@ -98,6 +98,22 @@ sections:
             has_icon: true
             icon: arrow-right
             icon_position: right
+  - section_id: mini-features
+    type: section_mini_features
+    title: Even more features
+    features:
+      - title: Document and Image Storage
+        description: >-
+          Upload files and images to each investment. This is helpful for storing important documents such as leases, deeds, and contracts in a secure location that can be accessed from anywhere on any device at any time. You can also store images of each property and view differences before and after rehabs without having to pull out the old scrapbook! Protect against theft and natural disaster by storing documents in the cloud rather than laying around your office.
+        icon: GlobeAltIcon
+      - title: Interactive Pro Forma
+        description: >-
+          RealNumberz will automatically generate a ProForma for each of your properties, once generated you will be able to change the default assumptions to see what returns you will obtain under varying circumstances. After entering LedgerItems, you will be able to view actual performance of each asset based on true income and expense data. You can also type in a property’s address to the ProForma and it will generate values to assist in purchasing new assets.
+        icon: LightningBoltIcon
+      - title: Concierge Upload Services
+        description: >- 
+          We know you’re busy. That’s why we created RealNumberz! The application will save you time tracking and managing your investments, but if you can’t find the time to enter the information how will you reap the rewards? Don’t worry. We have a team of dedicated data-entry specialists who can load your investments into the system without being able to see your portfolio. Note: This service comes at an additional cost.
+        icon: ScaleIcon
   - section_id: call-to-action
     type: section_cta
     title: This Is Call to Action Block!
