@@ -143,12 +143,12 @@ export default class Footer extends React.Component {
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-200 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
+          <div className="border-t border-gray-200 dark:border-gray-700 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
             <div>
               <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
                 Subscribe to our newsletter
               </h3>
-              <p className="mt-2 text-base text-gray-500">
+              <p className="mt-2 text-base text-gray-500 dark:text-gray-300">
                 The latest news, articles, and resources, sent to your inbox weekly.
               </p>
             </div>
@@ -168,14 +168,17 @@ export default class Footer extends React.Component {
               <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                   type="submit"
-                  className="w-full bg-indigo-600 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="w-full bg-primary-600 dark:bg-primary-500 border border-transparent
+                    rounded-md py-2 px-4 flex items-center justify-center text-base font-medium
+                    text-white hover:bg-primary-700 dark:hover:bg-primary-600 focus:outline-none focus:ring-2
+                    focus:ring-offset-2 focus:ring-primary-600 dark:focus:ring-primary-500"
                 >
                   Subscribe
                 </button>
               </div>
             </form>
           </div>
-          <div className="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
+          <div className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-8 md:flex md:items-center md:justify-between">
             <div className="flex space-x-6 md:order-2">
               {_.map(links, (action, actionIdx) => (
                 <ActionLink key={actionIdx} action={action} />

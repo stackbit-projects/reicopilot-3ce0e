@@ -53,7 +53,7 @@ export default class SectionHero extends React.Component {
                         className="mt-3 w-full px-6 py-3 border border-transparent text-base
                           font-medium rounded-md text-white bg-primary-600 shadow-sm
                           hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2
-                          focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex
+                          focus:ring-primary-600 dark:focus:ring-primary-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex
                           sm:items-center sm:w-auto dark:bg-primary-500 dark:hover:bg-primary-600"
                       >
                         {actions[0].label}

@@ -91,7 +91,7 @@
             },
             {
                 "type": "footer_nav",
-                "title": "Company @",
+                "title": "Company 2",
                 "nav_links": [
                     {
                         "label": "About Us",
@@ -110,36 +110,6 @@
                         "url": "/contact"
                     }
                 ]
-            }
-        ],
-        "subscribe": {
-            "type": "footer_form",
-            "title": "Subscribe",
-            "content": "Stay up to date with our latest developments.",
-            "form_id": "subscribeForm",
-            "hide_labels": true,
-            "form_fields": [
-                {
-                    "input_type": "email",
-                    "name": "email",
-                    "label": "Email",
-                    "default_value": "Enter email address",
-                    "is_required": true
-                }
-            ],
-            "submit_label": "Subscribe"
-        },
-        "has_nav": true,
-        "nav_links": [
-            {
-                "label": "Home",
-                "url": "/",
-                "style": "link"
-            },
-            {
-                "label": "Privacy Policy",
-                "url": "/privacy-policy",
-                "style": "link"
             }
         ],
         "content": "&copy; REI Copilot 2021. All rights reserved."
