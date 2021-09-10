@@ -108,12 +108,41 @@ sections:
         icon: GlobeAltIcon
       - title: Interactive Pro Forma
         description: >-
-          RealNumberz will automatically generate a ProForma for each of your properties, once generated you will be able to change the default assumptions to see what returns you will obtain under varying circumstances. After entering LedgerItems, you will be able to view actual performance of each asset based on true income and expense data. You can also type in a property’s address to the ProForma and it will generate values to assist in purchasing new assets.
+          REI Copilot will automatically generate a ProForma for each of your properties, once generated you will be able to change the default assumptions to see what returns you will obtain under varying circumstances. After entering LedgerItems, you will be able to view actual performance of each asset based on true income and expense data. You can also type in a property’s address to the ProForma and it will generate values to assist in purchasing new assets.
         icon: LightningBoltIcon
       - title: Concierge Upload Services
         description: >- 
-          We know you’re busy. That’s why we created RealNumberz! The application will save you time tracking and managing your investments, but if you can’t find the time to enter the information how will you reap the rewards? Don’t worry. We have a team of dedicated data-entry specialists who can load your investments into the system without being able to see your portfolio. Note: This service comes at an additional cost.
+          We know you’re busy. That’s why we created REI Copilot! The application will save you time tracking and managing your investments, but if you can’t find the time to enter the information how will you reap the rewards? Don’t worry. We have a team of dedicated data-entry specialists who can load your investments into the system without being able to see your portfolio. Note: This service comes at an additional cost.
         icon: ScaleIcon
+  - section_id: security
+    type: section_security
+    title: Ensure You're Secure
+    content: >-
+      <p>We use REI Copilot to manage our own investment portfolios. It’s why we created it!</p>
+      <p class="mt-3">
+      So, we protect your data as if it was our own. We follow industry best practices and work daily to ensure make sure we offer top-level data security that exceeds customer expectations.
+      </p>
+      <p class="mt-3">If you have any questions at all, just ask. We’re always happy to help!</p>
+    action:
+      label: Ask us something
+      url: 'contact'
+    features:
+      - id: 1
+        title: Two-Factor Authentication
+        content: >-
+          Prevent unwanted access of your account using confirmation codes sent to trusted devices. Intruders won’t have access to your account even if they physically steal your laptop. You can’t do that with pen and paper.
+      - id: 2
+        title: Encryption of Data In Transit and At Rest
+        content: >-
+          REI Copilot only allows client requests using strong TLS protocols and ciphers. Requests to our API require authentication which utilizes cryptographically hashed headers and timestamps to verify authenticity.
+          <br />
+          Though we limit the amount of sensitive data we require from users, any sensitive data stored (ex. password) is encrypted.
+      - id: 3
+        title: Access Controls
+        content: >-
+          REI Copilot has various levels of access controls throughout the system.
+          <br />
+          Even our own Concierge Upload members, do not have access to your data and cannot view dashboards and previously entered information when creating uploading your investments.
   - section_id: call-to-action
     type: section_cta
     title: This Is Call to Action Block!

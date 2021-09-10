@@ -22,6 +22,7 @@ import SectionMiniFeatures from './SectionMiniFeatures';
 import SectionPosts from './SectionPosts';
 import SectionPricing from './SectionPricing';
 import SectionReviews from './SectionReviews';
+import SectionSecurity from './SectionSecurity';
 
 export {
     Action,
@@ -47,7 +48,8 @@ export {
     SectionMiniFeatures,
     SectionPosts,
     SectionPricing,
-    SectionReviews
+    SectionReviews,
+    SectionSecurity
 };
 
 export default {
@@ -74,5 +76,6 @@ export default {
     SectionMiniFeatures,
     SectionPosts,
     SectionPricing,
-    SectionReviews
+    SectionReviews,
+    SectionSecurity,
 };
