@@ -124,7 +124,7 @@ sections:
       </p>
       <p class="mt-3">If you have any questions at all, just ask. We’re always happy to help!</p>
     action:
-      label: Ask us something
+      label: Ask us anything
       url: 'contact'
     features:
       - id: 1

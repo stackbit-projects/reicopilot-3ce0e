@@ -12,6 +12,7 @@ import Layout from './Layout';
 import LogoWithText from './LogoWithText';
 import OurStory from './OurStory';
 import Icon from './Icon';
+import SectionAbout from './SectionAbout';
 import SectionContact from './SectionContact';
 import SectionContent from './SectionContent';
 import SectionCta from './SectionCta';
@@ -40,6 +41,7 @@ export {
     LogoWithText,
     OurStory,
     Icon,
+    SectionAbout,
     SectionContact,
     SectionContent,
     SectionCta,
@@ -69,6 +71,7 @@ export default {
     LogoWithText,
     OurStory,
     Icon,
+    SectionAbout,
     SectionContact,
     SectionContent,
     SectionCta,
