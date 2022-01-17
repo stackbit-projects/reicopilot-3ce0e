@@ -81,7 +81,7 @@ If you need a hand, make sure to check the [Stackbit support page](https://stack
 
         npm run develop
 
-1. Open [http://localhost:3000/](http://localhost:3000/) in the browser to see
+1. Open [http://localhost:3001/](http://localhost:3001/) in the browser to see
    your site. You can now edit the site contents, and the browser will
    live-update your changes. 🎉
 

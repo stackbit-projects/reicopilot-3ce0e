@@ -15,6 +15,25 @@ const SectionPricing = (props) =>  {
     setSelectedTab(index);
   }
 
+  const createCheckoutSession = async (priceId) => {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/stripe-checkout/create-checkout-session`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ priceId }),
+    });
+
+    const body = await res.json()
+
+    if (body.sessionUrl) {
+      window.location.href = body.sessionUrl;
+    } else {
+      // Display error message
+      console.log(body.message);
+    }
+  };
+
   const section = get(props, 'section');
   const sectionId = get(section, 'section_id');
   const title = get(section, 'title');
@@ -120,9 +139,10 @@ const SectionPricing = (props) =>  {
                   </ul>
                 </div>
                 <a
-                  href={plan.href}
+                  // href="#"
+                  onClick={() => createCheckoutSession(plan.name)}
                   className={classNames(
-                    'mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium', {
+                    'cursor-pointer mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium', {
                     'bg-primary-50 text-primary-700 hover:bg-primary-100': idx !== 1,
                     'dark:bg-primary-200 dark:bg-text-primary-900 dark:hover:bg-primary-300': idx !== 1,
                     'bg-primary-500 text-white hover:bg-primary-600': idx === 1,
