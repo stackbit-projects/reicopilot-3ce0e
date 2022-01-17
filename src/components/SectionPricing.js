@@ -15,13 +15,13 @@ const SectionPricing = (props) =>  {
     setSelectedTab(index);
   }
 
-  const createCheckoutSession = async (priceId) => {
+  const createCheckoutSession = async (priceId, couponId) => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/stripe-checkout/create-checkout-session`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ priceId }),
+      body: JSON.stringify({ priceId, couponId }),
     });
 
     const body = await res.json()
@@ -140,7 +140,7 @@ const SectionPricing = (props) =>  {
                 </div>
                 <a
                   // href="#"
-                  onClick={() => createCheckoutSession(plan.name)}
+                  onClick={() => createCheckoutSession(plan.name, plan.couponCode)}
                   className={classNames(
                     'cursor-pointer mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium', {
                     'bg-primary-50 text-primary-700 hover:bg-primary-100': idx !== 1,

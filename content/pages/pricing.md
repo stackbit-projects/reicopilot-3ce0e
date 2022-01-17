@@ -9,21 +9,25 @@ sections:
     pricing_plans:
       - name: 'Basic'
         href: '#'
-        priceBuyNow: 47
-        priceFreeTrial: 69
-        description: All the basics for starting a new business
+        priceBuyNow: 68
+        priceFreeTrial: 97
+        couponCode: E0ff53Po
+        description: All the basics for getting started in real estate investment
         includedFeatures:
-          - Potenti felis, in cras at at ligula nunc.
-          - Orci neque eget pellentesque.
+          - Manage up to five active investments at a time
+          - Can upgrade to Unlimited once your portfolio scales to more than five investments
       - name: 'Unlimited'
         href: '#'
-        priceBuyNow: 97
-        priceFreeTrial: 139
-        description: 'All the basics for starting a new business'
+        priceBuyNow: 208
+        priceFreeTrial: 297
+        couponCode: YCyHt8nZ
+        description: Everything and more for taking control of your investment portfolio
         includedFeatures:
-          - Potenti felis, in cras at at ligula nunc.
-          - Orci neque eget pellentesque.
-          - Donec mauris sit in eu tincidunt etiam.
+          - Manage an unlimited amount of investments
+          - Property analyzer for quick analysis of potential investments
+          - Store all documents and images for each investment
+          - Automated reminder system so you never miss a payment
+          - And more...
     promotion:
       badge: Limited Time Offer
       title: Worried about initial set-up?
