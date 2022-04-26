@@ -11,6 +11,7 @@ import Header from './Header';
 import Layout from './Layout';
 import LogoWithText from './LogoWithText';
 import OurStory from './OurStory';
+import PrivacyPolicy from './PrivacyPolicy';
 import Icon from './Icon';
 import SectionAbout from './SectionAbout';
 import SectionContact from './SectionContact';
@@ -40,6 +41,7 @@ export {
     Layout,
     LogoWithText,
     OurStory,
+    PrivacyPolicy,
     Icon,
     SectionAbout,
     SectionContact,
@@ -70,6 +72,7 @@ export default {
     Layout,
     LogoWithText,
     OurStory,
+    PrivacyPolicy,
     Icon,
     SectionAbout,
     SectionContact,
